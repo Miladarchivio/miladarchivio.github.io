@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trattoria Esempio · Progetto dimostrativo di Tocca Roma</title>
+<meta name="description" content="Progetto dimostrativo: esempio di sito one-page per un ristorante. Attività fittizia, non è un cliente reale.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<style>
+:root{--cream:#F6F0E4;--green:#2F4A3A;--ochre:#C9A15A;--ink:#26302A;--mut:#5E655F;--line:rgba(38,48,42,.18);--serif:'Cormorant Garamond',Georgia,serif;--sans:Manrope,system-ui,Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+a{color:inherit;text-decoration:none}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.6}
+.demo{background:var(--ink);color:#F6F0E4;text-align:center;font-size:13px;padding:8px 14px;letter-spacing:.04em}
+.wrap{width:min(1000px,92vw);margin:0 auto}
+header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+.brand{font-family:var(--serif);font-size:30px;font-weight:700;font-style:italic;color:var(--green)}
+nav{display:flex;gap:22px;font-size:14px;font-weight:600}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:30px 0 70px}
+.hero h1{font-family:var(--serif);font-size:clamp(44px,6vw,76px);line-height:1;color:var(--green);font-weight:600}
+.hero p{margin:18px 0 24px;font-size:18px;color:var(--mut);max-width:430px}
+.btn{display:inline-block;background:var(--green);color:var(--cream);padding:14px 28px;border-radius:999px;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.arch{border-radius:999px 999px 0 0;background:url(../assets/photos/pizza-tavolo.jpg) center/cover;height:470px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-family:var(--serif);font-size:42px;color:var(--green);margin-bottom:18px;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.grid h3{font-family:var(--serif);font-size:26px;color:var(--green);margin-bottom:6px}
+.grid p{color:var(--mut);font-size:15px}
+.hours{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.hours dl{display:grid;grid-template-columns:auto 1fr;gap:6px 24px;font-size:17px}
+.hours dt{font-weight:700}
+.map{background:#E4DCCB;border-radius:14px;height:230px;display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:14px;text-align:center;padding:20px}
+footer{background:var(--green);color:var(--cream);padding:30px 0;font-size:14px;margin-top:30px}
+@media(max-width:760px){.hero,.grid,.hours{grid-template-columns:1fr}.arch{height:320px;max-width:300px}nav{display:none}}
+</style>
+</head>
+<body>
+<div class="demo">Progetto dimostrativo di Tocca Roma · attività fittizia, non è un cliente reale</div>
+<div class="wrap">
+<header><div class="brand">Trattoria Esempio</div><nav><a href="#menu">Menu</a><a href="#orari">Orari</a><a href="#dove">Dove siamo</a></nav></header>
+<div class="hero">
+  <div><h1>Cucina romana, <em>semplice e di casa.</em></h1><p>Una pagina chiara con tutto quello che serve ai clienti: cosa si mangia, quando siamo aperti, dove trovarci.</p><a class="btn" href="#orari">Orari e contatti</a></div>
+  <div class="arch" role="img" aria-label="Pizza su un tavolo di legno (immagine illustrativa)"></div>
+</div>
+<section id="menu"><h2>Il menu in breve</h2><div class="grid">
+  <div><h3>Antipasti</h3><p>Supplì, bruschette, fritti della casa.</p></div>
+  <div><h3>Primi</h3><p>Pasta fresca e classici romani.</p></div>
+  <div><h3>Pizze</h3><p>Impasto lungo, forno a legna.</p></div></div></section>
+<section id="orari"><h2>Orari e contatti</h2><div class="hours">
+  <dl><dt>Lun–Ven</dt><dd>12:00–15:00 · 19:00–23:00</dd><dt>Sabato</dt><dd>12:00–23:30</dd><dt>Domenica</dt><dd>Chiuso</dd></dl>
+  <div><p><strong>Indirizzo</strong><br>Via Esempio 1, Roma (indirizzo fittizio)</p><p style="margin-top:12px"><strong>Prenotazioni</strong><br>In un sito reale qui trovi telefono, WhatsApp e collegamenti ai profili social.</p></div></div></section>
+<section id="dove"><h2>Dove siamo</h2><div class="map">In un sito reale qui c'è la mappa con il percorso per arrivare.</div></section>
+</div>
+<footer><div class="wrap">Trattoria Esempio · Progetto dimostrativo realizzato da Tocca Roma · Le immagini sono illustrative (Pexels).</div></footer>
+</body>
+</html>

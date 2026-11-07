@@ -3,174 +3,249 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tocca Roma · Recensioni Google, foto e siti per attività di Roma</title>
-<meta name="description" content="Carte NFC per le recensioni Google, servizio fotografico e sito web per caffè, ristoranti e negozi di Roma. Servizio fotografico gratuito fino al 31 dicembre 2026 per i nuovi clienti.">
+<title>Tocca Roma · Studio digitale e creativo per le attività locali di Roma</title>
+<meta name="description" content="Siti web, fotografia e soluzioni NFC per bar, ristoranti, barbieri e negozi di Roma. Prezzi chiari e un primo passo semplice: parliamo della tua attività.">
+<link rel="canonical" href="https://toccaroma.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="Tocca Roma">
+<meta property="og:title" content="Tocca Roma · Studio digitale e creativo per le attività locali di Roma">
+<meta property="og:description" content="Siti web, fotografia e soluzioni NFC per le attività locali di Roma. Fatti trovare. Fatti conoscere. Lascia il segno.">
+<meta property="og:url" content="https://toccaroma.github.io/">
+<meta property="og:image" content="https://toccaroma.github.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tocca Roma, studio digitale e creativo a Roma">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#B8654A">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 228 250'%3E%3Cpath fill-rule='evenodd' fill='%23B8654A' d='M0 0H168A60 60 0 0 1 168 120H114L225 250H0Z M30 26H126V46H88V104H68V46H30Z'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 <style>
-:root{--cream:#F4ECDF;--lime:#E6DCCB;--terra:#B8654A;--terra-d:#9E5239;--sage:#758468;--ochre:#D4B98A;--graph:#343A33;--mut:#6B665C;--line:rgba(52,58,51,.18);
---serif:'Cormorant Garamond',Georgia,serif;--sans:Manrope,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+:root{--cream:#F4ECDF;--lime:#E6DCCB;--terra:#B8654A;--terra-d:#9A4F36;--sage:#758468;--sage-d:#5B6A50;--ochre:#D4B98A;--graph:#343A33;--mut:#5F5B52;--line:rgba(52,58,51,.18);--card:#FBF7EF;
+--serif:'Cormorant Garamond',Georgia,serif;--sans:Manrope,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 [hidden]{display:none!important}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 body{background:var(--cream);color:var(--graph);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--graph);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--graph);color:var(--cream);padding:10px 16px;border-radius:6px;z-index:50}
+.skip:focus{left:8px}
 .wrap{width:min(1160px,92vw);margin:0 auto}
 h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1}
-h1{font-size:clamp(44px,6.2vw,84px);letter-spacing:-.01em}
-h2{font-size:clamp(34px,4.4vw,56px);margin-bottom:12px}
-h3{font-size:28px;margin-bottom:6px}
+h1{font-size:clamp(46px,6.2vw,88px);letter-spacing:-.015em;line-height:.98}
+h2{font-size:clamp(34px,4.4vw,56px);margin-bottom:14px}
+h3{font-size:30px;margin-bottom:6px}
 em{font-style:italic;color:var(--terra);font-weight:600}
-.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:var(--terra);margin-bottom:16px;display:block}
-.btn{display:inline-block;background:var(--terra);color:var(--cream);padding:15px 30px;border-radius:999px;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;border:2px solid var(--terra);transition:.15s}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:var(--terra-d);margin-bottom:16px;display:block}
+.btn{display:inline-block;background:var(--terra);color:#fff;padding:15px 30px;border-radius:999px;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;border:2px solid var(--terra);transition:background .15s}
 .btn:hover{background:var(--terra-d);border-color:var(--terra-d)}
 .btn.o{background:transparent;color:var(--graph);border-color:var(--graph)}.btn.o:hover{background:var(--graph);color:var(--cream)}
+.link{font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;border-bottom:2px solid var(--terra);padding-bottom:2px}
 header{background:var(--cream);position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line)}
-header .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
-.logo{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-style:italic;font-weight:700;font-size:26px}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-style:italic;font-weight:700;font-size:27px;line-height:1}
 .logo svg{width:30px;height:33px}
-nav{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:700}
-nav a:hover{color:var(--terra)}nav .btn{padding:10px 22px;font-size:12.5px}nav .btn:hover{color:var(--cream)}
-.hero{padding:56px 0 84px}
-.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+.logo small{display:none;font-family:var(--sans);font-style:normal;font-weight:700;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);margin-left:6px;border-left:1px solid var(--line);padding-left:12px}
+nav{display:flex;gap:26px;align-items:center;font-size:14px;font-weight:700}
+nav a:hover{color:var(--terra-d)}nav .btn{padding:10px 20px;font-size:12px}nav .btn:hover{color:#fff}
+.hero{padding:54px 0 90px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
 .hero h1{margin:6px 0 24px}
-.hero .lead{font-size:18px;color:var(--mut);max-width:520px;margin-bottom:28px}
-.promo{display:inline-block;background:var(--terra);color:var(--cream);padding:11px 20px;border-radius:6px;font-weight:700;font-size:14.5px;margin-bottom:28px}
-.cta{display:flex;gap:12px;flex-wrap:wrap}
-.arch{border-radius:999px 999px 0 0;background-size:cover;background-position:center}
-.himg{height:560px;background-image:url(assets/photos/caffe-luce.jpg);background-position:30% center;position:relative}
-.himg i{position:absolute;left:-26px;bottom:42px;background:var(--cream);border-radius:6px;padding:12px 18px;font-style:normal;font-size:13.5px;font-weight:700;box-shadow:0 10px 28px rgba(52,58,51,.25)}
-.himg i b{display:block;color:var(--terra);font-family:var(--serif);font-size:22px}
+.hero .lead{font-size:19px;color:var(--mut);max-width:540px;margin-bottom:28px}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.promo{display:inline-flex;gap:10px;align-items:center;background:var(--lime);border-left:4px solid var(--terra);padding:12px 18px;font-size:14.5px;font-weight:600;border-radius:4px}
+.promo a{text-decoration:underline;text-underline-offset:3px}
+.arches{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:end}
+.arch{border-radius:999px 999px 0 0;background-size:cover;background-position:center;position:relative}
+.arches .a1{height:400px}.arches .a2{height:500px}.arches .a3{height:340px}
+.arches figcaption,.cap{font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--terra-d);margin-top:10px;text-align:center}
 section{padding:92px 0}
-.sub{color:var(--mut);max-width:620px;margin-bottom:40px;font-size:17px}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.card{display:flex;flex-direction:column}
-.card .ph{height:300px;margin-bottom:22px}
-.card p{color:var(--mut);margin-bottom:14px;font-size:15px}
-.card ul{list-style:none;margin:0 0 18px;font-size:14.5px}
-.card li{padding-left:20px;position:relative;margin-bottom:5px}
-.card li:before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;background:var(--terra);transform:rotate(45deg)}
-.price{margin-top:auto;border-top:1.5px solid var(--graph);padding-top:14px;font-size:14px;color:var(--mut)}
-.price b{font-family:var(--serif);font-size:42px;color:var(--graph);font-weight:700;line-height:1}
-.price .row{display:block;margin-bottom:2px}
-.price s{margin-left:6px}
-.tag{display:inline-block;background:var(--terra);color:var(--cream);border-radius:4px;padding:2px 9px;font-weight:800;font-size:11.5px;margin-left:6px;vertical-align:middle;letter-spacing:.03em}
-.offpromo{display:none}.promo-off .onpromo{display:none}.promo-off .offpromo{display:inline}
+.sub{color:var(--mut);max-width:640px;margin-bottom:40px;font-size:17.5px}
 .band{background:var(--lime)}
-.bun{background:var(--graph);color:var(--cream);padding:44px;display:grid;grid-template-columns:1.4fr .6fr;gap:30px;align-items:center}
-.bun h3{font-size:40px}.bun p{color:var(--lime)}
-.bun .price{border:0;text-align:right;color:var(--lime)}.bun .price b{font-size:66px;color:var(--ochre)}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
-.step .n{font-family:var(--serif);font-size:72px;color:var(--terra);line-height:1;font-weight:600}
-.step b{display:block;font-size:18px;margin:8px 0 4px}.step span{color:var(--mut);font-size:15px}
-.styles{display:grid;grid-template-columns:repeat(7,1fr);gap:14px}
-.styles figure{text-align:center;font-size:12.5px;color:var(--mut);font-weight:700}
-.styles img{border-radius:8px;box-shadow:0 8px 20px rgba(52,58,51,.25);margin-bottom:10px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.pillar{display:flex;flex-direction:column}
+.pillar .arch{height:300px;margin-bottom:22px}
+.pillar .tag{font-size:11.5px;letter-spacing:.2em;font-weight:800;text-transform:uppercase;color:var(--terra-d);margin-bottom:6px}
+.pillar p{color:var(--mut);font-size:15.5px;margin-bottom:12px}
+.pillar ul{list-style:none;margin:0 0 14px;font-size:15px}
+.pillar li{padding-left:22px;position:relative;margin-bottom:5px}
+.pillar li:before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;background:var(--terra);transform:rotate(45deg)}
+.benefit{font-family:var(--serif);font-size:21px;line-height:1.25;font-style:italic;margin-bottom:16px}
+.price{margin-top:auto;border-top:1.5px solid var(--graph);padding-top:14px;font-size:14.5px;color:var(--mut)}
+.price b{font-family:var(--serif);font-size:38px;color:var(--graph);font-weight:700;line-height:1}
+.price .note{display:block;font-size:13px;margin-top:4px}
+.price .link{display:inline-block;margin-top:12px;color:var(--graph)}
+.chip{display:inline-block;background:var(--terra);color:#fff;border-radius:4px;padding:2px 9px;font-weight:800;font-size:11.5px;vertical-align:middle;letter-spacing:.03em}
+.offpromo{display:none}.promo-off .onpromo{display:none}.promo-off .offpromo{display:inline}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.demo-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:start}
+.shot{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px}
+.devices{display:flex;gap:18px;align-items:flex-end;justify-content:center}
+.devices .d{overflow:hidden;border:3px solid var(--graph);background:#fff}
+.devices .desk{width:66%;height:300px;border-radius:10px 10px 0 0}
+.devices .mob{width:24%;height:340px;border-radius:22px}
+.devices img{width:100%}
+.styles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.styles img{border-radius:6px;box-shadow:0 6px 14px rgba(52,58,51,.25)}
+.styles figure{font-size:11px;font-weight:700;color:var(--mut);text-align:center}
+.pk{background:var(--graph);color:var(--cream);padding:44px;display:grid;grid-template-columns:1.3fr .7fr;gap:36px;align-items:center;border-radius:6px}
+.pk h3{font-size:42px}.pk p{color:var(--lime);margin-top:8px}
+.pk ul{list-style:none;margin-top:14px;color:var(--cream);font-size:15.5px}
+.pk li{margin-bottom:4px}
+.pk .big{font-family:var(--serif);font-size:84px;font-weight:700;color:var(--ochre);line-height:1}
+.pk .math{font-size:13.5px;color:var(--lime);margin-top:10px;line-height:1.55}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;list-style:none}
+.steps .n{font-family:var(--serif);font-size:70px;color:var(--terra);line-height:1;font-weight:600}
+.steps b{display:block;font-size:17px;margin:8px 0 4px}.steps span{color:var(--mut);font-size:15px}
+.fine{margin-top:30px;color:var(--mut);font-size:14.5px;max-width:720px;border-left:3px solid var(--sage);padding-left:16px}
 .faq details{border-top:1px solid var(--line);padding:18px 0}
 .faq details:last-child{border-bottom:1px solid var(--line)}
-.faq summary{cursor:pointer;font-family:var(--serif);font-weight:600;font-size:24px}
-.faq p{color:var(--mut);margin-top:8px;max-width:760px}
+.faq summary{cursor:pointer;font-family:var(--serif);font-weight:600;font-size:25px;line-height:1.15}
+.faq p{color:var(--mut);margin-top:10px;max-width:780px}
 .contact{background:var(--terra);color:var(--cream);text-align:center}
-.contact h2{color:var(--cream)}.contact p{max-width:560px;margin:10px auto 28px;opacity:.92}
-.contact .btn{background:var(--cream);color:var(--terra);border-color:var(--cream)}.contact .btn:hover{background:var(--lime)}
-.contact .btn.o{background:transparent;color:var(--cream);border-color:var(--cream)}.contact .btn.o:hover{background:var(--cream);color:var(--terra)}
-footer{background:var(--graph);color:var(--lime);font-size:13px;padding:24px 0}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-@media(max-width:860px){nav a:not(.btn){display:none}.hero .wrap,.grid3,.steps,.bun{grid-template-columns:1fr}.himg{height:380px;max-width:340px}.himg i{left:12px}.styles{grid-template-columns:repeat(4,1fr)}.bun .price{text-align:left}.hero{padding-top:30px}section{padding:64px 0}}
+.contact h2{color:var(--cream)}.contact p{max-width:560px;margin:10px auto 28px}
+.contact .btn{background:var(--cream);color:var(--terra-d);border-color:var(--cream)}.contact .btn:hover{background:var(--lime)}
+.contact .btn.o{background:transparent;color:var(--cream);border-color:var(--cream)}.contact .btn.o:hover{background:var(--cream);color:var(--terra-d)}
+.contact .btn:focus-visible{outline-color:var(--cream)}
+footer{background:var(--graph);color:#D9D2C3;font-size:13px;padding:26px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+@media(min-width:1000px){.logo small{display:inline-block}}
+@media(max-width:900px){nav a:not(.btn){display:none}.hero .wrap,.grid3,.two,.demo-grid,.pk,.steps{grid-template-columns:1fr}.arches{max-width:420px}.arches .a1{height:260px}.arches .a2{height:330px}.arches .a3{height:230px}.hero{padding-top:30px}section{padding:64px 0}.steps{gap:22px}}
 </style>
 </head>
 <body>
+<a class="skip" href="#contenuto">Vai al contenuto</a>
 <header><div class="wrap">
-  <a class="logo" href="#top" aria-label="Tocca Roma">
-    <svg viewBox="0 0 228 250" aria-hidden="true"><path fill-rule="evenodd" fill="#B8654A" d="M0 0H168A60 60 0 0 1 168 120H114L225 250H0Z M30 26H126V46H88V104H68V46H30Z"/></svg>Tocca Roma</a>
-  <nav><a href="#servizi">Servizi</a><a href="#pacchetto">Pacchetto</a><a href="#come">Come funziona</a><a href="#stili">Stili</a><a href="#domande">Domande</a><a class="btn" href="#contatti">Scrivici</a></nav>
+  <a class="logo" href="#top" aria-label="Tocca Roma, torna in cima">
+    <svg viewBox="0 0 228 250" aria-hidden="true" focusable="false"><path fill-rule="evenodd" fill="#B8654A" d="M0 0H168A60 60 0 0 1 168 120H114L225 250H0Z M30 26H126V46H88V104H68V46H30Z"/></svg>Tocca Roma<small>Studio digitale e creativo · Roma</small></a>
+  <nav aria-label="Principale"><a href="#servizi">Servizi</a><a href="#esempi">Esempi</a><a href="#pacchetto">Pacchetto</a><a href="#come">Come funziona</a><a href="#domande">Domande</a><a class="btn" href="#contatti">Parliamo</a></nav>
 </div></header>
 
+<main id="contenuto">
 <div class="hero" id="top"><div class="wrap">
   <div>
-    <span class="eyebrow">Studio creativo · Roma</span>
-    <h1>Più recensioni su Google. <em>Foto e sito che fanno entrare.</em></h1>
-    <p class="lead">Una carta NFC per le recensioni, foto curate per Google Maps e Instagram e un sito semplice per la tua attività. Prezzi chiari, tutto a Roma.</p>
-    <div class="promo onpromo">Servizio fotografico gratuito fino al 31 dicembre 2026 per i nuovi clienti</div>
-    <div class="cta"><a class="btn" href="#contatti">Richiedi un'anteprima gratuita</a><a class="btn o" href="#servizi">Vedi i prezzi</a></div>
+    <span class="eyebrow">Studio digitale e creativo · Roma</span>
+    <h1><span style="display:block">Fatti trovare.</span><span style="display:block">Fatti conoscere.</span><em style="display:block">Lascia il segno.</em></h1>
+    <p class="lead">Fotografia, siti web e soluzioni digitali per aiutare le attività locali di Roma a presentarsi al meglio.</p>
+    <div class="cta"><a class="btn" href="#contatti">Parliamo della tua attività</a><a class="btn o" href="#servizi">Scopri i servizi</a></div>
+    <p class="promo onpromo">Servizio fotografico gratuito fino al 31 dicembre 2026 per i nuovi clienti. <a href="#domande">Condizioni</a></p>
   </div>
-  <div class="arch himg" role="img" aria-label="Angolo di un locale con luce del pomeriggio (immagine illustrativa)"><i><b>15 foto in 48 ore</b>per Google Maps e Instagram</i></div>
+  <figure class="arches" aria-label="Tre esempi: sito web, fotografia, carta NFC">
+    <div><div class="arch a1" role="img" aria-label="Pagina di un sito dimostrativo per un ristorante" style="background-image:url(assets/demo/trattoria-mobile.png);background-position:top"></div></div>
+    <div><div class="arch a2" role="img" aria-label="Angolo di un locale con luce del pomeriggio (foto illustrativa)" style="background-image:url(assets/photos/caffe-luce.jpg);background-position:35% center"></div></div>
+    <div><div class="arch a3" role="img" aria-label="Carta NFC con il nome di un locale (concept)" style="background:#E6DCCB;overflow:hidden"><img src="assets/cards/noir_front.svg" alt="" style="position:absolute;left:50%;top:70px;width:118px;transform:translateX(-50%) rotate(-6deg);border-radius:8px;box-shadow:0 10px 22px rgba(52,58,51,.35)"></div></div>
+    <figcaption>Sito</figcaption><figcaption>Foto</figcaption><figcaption>Carta NFC</figcaption>
+  </figure>
 </div></div>
 
-<section id="servizi"><div class="wrap">
-  <span class="eyebrow">Servizi</span><h2>Tre servizi, <em>prezzi semplici</em></h2>
-  <p class="sub">Puoi scegliere un solo servizio o combinarli. L'anteprima e il preventivo sono senza impegno.</p>
+<section class="band" aria-labelledby="h-intro"><div class="wrap two">
+  <div><span class="eyebrow">Il punto di partenza</span><h2 id="h-intro">La tua attività merita una <em>presenza online all'altezza.</em></h2></div>
+  <p style="font-size:18px;color:var(--mut)">Oggi i clienti ti incontrano in tanti posti: nei risultati di ricerca, su Google Maps, sui social, davanti alla tua vetrina. Foto curate, informazioni chiare e un modo semplice per contattarti rendono la tua attività più riconoscibile e coerente ovunque ti trovino.</p>
+</div></section>
+
+<section id="servizi" aria-labelledby="h-servizi"><div class="wrap">
+  <span class="eyebrow">Servizi</span><h2 id="h-servizi">Tre modi per <em>valorizzare la tua attività.</em></h2>
+  <p class="sub">Puoi scegliere un solo servizio o combinarli. L'anteprima iniziale è un concept gratuito e senza impegno.</p>
   <div class="grid3">
-    <div class="card"><div class="arch ph" style="background-image:url(assets/photos/caffe-luce.jpg);background-position:70% center"></div>
-      <h3>Carta NFC per le recensioni</h3><p>Il cliente avvicina il telefono e si apre la pagina per scrivere una recensione su Google.</p>
-      <ul><li>Il nome del tuo locale sulla carta</li><li>Codice QR sul retro</li><li>iPhone e Android, nessuna app</li></ul>
-      <div class="price"><span class="row"><b>€15</b> 1 carta</span><span class="row"><b>€20</b> 2 carte</span></div></div>
-    <div class="card"><div class="arch ph" style="background-image:url(assets/photos/piatti-italiani.jpg)"></div>
-      <h3>Servizio fotografico</h3><p>15 foto della tua attività, pronte per Google Maps e Instagram.</p>
-      <ul><li>Una visita concordata con te</li><li>Fino a 15 foto ritoccate</li><li>Consegna entro 48 ore dallo scatto</li></ul>
-      <div class="price"><span class="onpromo"><b>€0</b> <s>€79</s><span class="tag">fino al 31/12/2026, nuovi clienti</span></span><span class="offpromo"><b>€79</b></span></div></div>
-    <div class="card"><div class="arch ph" style="background-image:url(assets/photos/cappuccino.jpg)"></div>
-      <h3>Sito web per la tua attività</h3><p>Una pagina chiara con orari, menu, mappa e contatti.</p>
+    <article class="pillar">
+      <div class="arch" role="img" aria-label="Sito dimostrativo per un ristorante su telefono" style="background-image:url(assets/demo/trattoria-mobile.png);background-position:top"></div>
+      <div class="tag">Presenza digitale</div><h3>Siti web</h3>
+      <p>Una pagina chiara con le informazioni che servono ai tuoi clienti.</p>
       <ul><li>Una pagina adatta al telefono</li><li>Orari, menu o servizi, mappa e contatti</li><li>Collegamenti a Instagram e al profilo Google</li><li>Pubblicazione online inclusa</li></ul>
-      <div class="price"><b>€199</b> una tantum<br><span style="font-size:12.5px">Il dominio (circa €10–12 l'anno) è a parte, al costo.</span></div></div>
+      <div class="benefit">I clienti trovano le informazioni importanti, da qualsiasi dispositivo.</div>
+      <div class="price"><b>€199</b> una tantum<span class="note">Dominio personalizzato (circa €10–12 l'anno) a parte, al costo.</span><a class="link" href="#esempi">Guarda l'esempio</a></div>
+    </article>
+    <article class="pillar">
+      <div class="arch" role="img" aria-label="Piatti italiani visti dall'alto (foto illustrativa)" style="background-image:url(assets/photos/piatti-italiani.jpg)"></div>
+      <div class="tag">Immagine</div><h3>Fotografia</h3>
+      <p>Foto del tuo locale, pensate per Google Maps, per il sito e per Instagram.</p>
+      <ul><li>Una visita concordata con te</li><li>Fino a 15 foto ritoccate</li><li>Consegna entro 48 ore dallo scatto</li></ul>
+      <div class="benefit">Immagini curate raccontano la tua attività in modo più professionale.</div>
+      <div class="price"><span class="onpromo"><b>€0</b> <span class="chip">fino al 31/12/2026, nuovi clienti</span><span class="note">Prezzo regolare €79. L'offerta non richiede l'acquisto di altri servizi.</span></span><span class="offpromo"><b>€79</b> per 15 foto</span><a class="link" href="#domande">Condizioni</a></div>
+    </article>
+    <article class="pillar">
+      <div class="arch" role="img" aria-label="Carta NFC con il nome di un locale (concept)" style="background:#E6DCCB;overflow:hidden"><img src="assets/cards/sabbia_front.svg" alt="" style="position:absolute;left:50%;top:48px;width:150px;transform:translateX(-50%) rotate(-6deg);border-radius:9px;box-shadow:0 12px 26px rgba(52,58,51,.35)"></div>
+      <div class="tag">Connessione</div><h3>Soluzioni NFC</h3>
+      <p>Un tocco, e il cliente arriva alla pagina che gli serve.</p>
+      <ul><li>Carta con il nome del tuo locale</li><li>Apre il link configurato: la pagina per lasciare una recensione su Google</li><li>Codice QR sul retro e sette stili a scelta</li></ul>
+      <div class="benefit">Rendi più semplice, per chi vuole, lasciare una recensione sincera.</div>
+      <div class="price"><b>€15</b> una carta · <b>€20</b> due carte<a class="link" href="#domande" style="display:block;width:fit-content">Come funziona</a></div>
+    </article>
   </div>
 </div></section>
 
-<section class="band" id="pacchetto"><div class="wrap">
-  <span class="eyebrow">Pacchetto</span><h2>Tutto insieme <em>costa meno</em></h2><p class="sub">Un'unica soluzione per presentarsi bene online e raccogliere recensioni.</p>
-  <div class="bun"><div><h3>Pacchetto Completo</h3><p>2 carte NFC + servizio fotografico (15 foto) + sito web one-page.</p></div>
-  <div class="price"><b>€209</b><br><s>€298 a prezzi regolari</s></div></div>
+<section class="band" id="esempi" aria-labelledby="h-esempi"><div class="wrap">
+  <span class="eyebrow">Esempi</span><h2 id="h-esempi">Le idee <em>prendono forma.</em></h2>
+  <p class="sub">Questi sono progetti dimostrativi: attività fittizie e concept creati per mostrare cosa puoi ricevere. Non sono lavori commissionati da clienti.</p>
+  <div class="demo-grid">
+    <div class="shot">
+      <div class="devices"><div class="d desk"><img src="assets/demo/trattoria-desktop.png" alt="Sito dimostrativo di un ristorante, versione desktop"></div><div class="d mob"><img src="assets/demo/trattoria-mobile.png" alt="Sito dimostrativo di un ristorante, versione telefono"></div></div>
+      <p class="cap" style="text-align:left;margin-top:16px">Progetto dimostrativo · sito per una trattoria fittizia · <a class="link" href="demo/trattoria-esempio.html" style="font-size:11.5px">Apri la pagina</a></p>
+    </div>
+    <div class="shot">
+      <div class="styles"><figure><img src="assets/cards/classico_front.svg" alt="Stile Classico">Classico</figure><figure><img src="assets/cards/elegante_front.svg" alt="Stile Elegante">Elegante</figure><figure><img src="assets/cards/noir_front.svg" alt="Stile Noir">Noir</figure><figure><img src="assets/cards/royal_front.svg" alt="Stile Royal">Royal</figure><figure><img src="assets/cards/smeraldo_front.svg" alt="Stile Smeraldo">Smeraldo</figure><figure><img src="assets/cards/bordeaux_front.svg" alt="Stile Bordeaux">Bordeaux</figure><figure><img src="assets/cards/sabbia_front.svg" alt="Stile Sabbia">Sabbia</figure></div>
+      <p class="cap" style="text-align:left;margin-top:16px">Concept illustrativo · sette stili di carta · il nome del tuo locale al posto di "Il tuo locale"</p>
+    </div>
+  </div>
+  <p class="fine">Le foto che vedi in questa pagina sono immagini illustrative (Pexels), non fotografie scattate per clienti.</p>
 </div></section>
 
-<section id="come"><div class="wrap">
-  <span class="eyebrow">Come funziona</span><h2>Tre passi, <em>nessuna complicazione</em></h2><p class="sub">Si parte sempre da un'anteprima gratuita.</p>
-  <div class="steps">
-    <div class="step"><div class="n">1</div><b>Mi scrivi</b><span>Mi dici che attività hai. Ti mostro un'anteprima con il nome del tuo locale, senza impegno.</span></div>
-    <div class="step"><div class="n">2</div><b>Prepariamo tutto</b><span>Dopo il tuo ok preparo carte, foto o sito. Provo ogni carta con il telefono prima di consegnarla.</span></div>
-    <div class="step"><div class="n">3</div><b>Consegna a mano</b><span>Passo di persona a Roma. Le carte vanno sul bancone o alla cassa e il lavoro è pronto.</span></div>
+<section id="pacchetto" aria-labelledby="h-pacchetto"><div class="wrap">
+  <span class="eyebrow">Pacchetto</span><h2 id="h-pacchetto">Un punto di partenza per <em>migliorare la tua presenza online.</em></h2>
+  <p class="sub">Le tre cose insieme, per partire con una presenza coerente.</p>
+  <div class="pk">
+    <div><h3>Pacchetto Completo</h3><p>Sito web one-page, 15 foto e 2 carte NFC.</p>
+      <ul><li>Un sito one-page adatto al telefono</li><li>15 foto ritoccate del tuo locale</li><li>2 carte NFC con il nome della tua attività</li></ul></div>
+    <div><div class="big">€209</div>
+      <p class="math">A prezzi regolari separati: €199 + €79 + €20 = €298.<br>Con l'offerta foto gratuita in corso, separati: €199 + €0 + €20 = €219.</p></div>
   </div>
 </div></section>
 
-<section class="band" id="stili"><div class="wrap">
-  <span class="eyebrow">Stili della carta</span><h2>Scegli lo stile <em>del tuo locale</em></h2><p class="sub">Sette stili, tutti con il nome della tua attività e il codice QR sul retro.</p>
-  <div class="styles">
-    <figure><img src="assets/cards/classico_front.svg" alt="Classico">Classico</figure>
-    <figure><img src="assets/cards/elegante_front.svg" alt="Elegante">Elegante</figure>
-    <figure><img src="assets/cards/noir_front.svg" alt="Noir">Noir</figure>
-    <figure><img src="assets/cards/royal_front.svg" alt="Royal">Royal</figure>
-    <figure><img src="assets/cards/smeraldo_front.svg" alt="Smeraldo">Smeraldo</figure>
-    <figure><img src="assets/cards/bordeaux_front.svg" alt="Bordeaux">Bordeaux</figure>
-    <figure><img src="assets/cards/sabbia_front.svg" alt="Sabbia">Sabbia</figure>
-  </div>
+<section class="band" id="come" aria-labelledby="h-come"><div class="wrap">
+  <span class="eyebrow">Come funziona</span><h2 id="h-come">Dal primo contatto alla consegna, <em>senza complicazioni.</em></h2>
+  <ol class="steps" style="margin-top:36px">
+    <li><div class="n" aria-hidden="true">1</div><b>Ci racconti la tua attività</b><span>Capiamo di cosa hai bisogno.</span></li>
+    <li><div class="n" aria-hidden="true">2</div><b>Prepariamo una proposta</b><span>Ti mostriamo un'anteprima con il nome della tua attività.</span></li>
+    <li><div class="n" aria-hidden="true">3</div><b>Realizziamo il progetto</b><span>Solo dopo il tuo ok, e provo ogni carta con il telefono.</span></li>
+    <li><div class="n" aria-hidden="true">4</div><b>Ti consegniamo tutto</b><span>Di persona, a Roma, quello che abbiamo concordato.</span></li>
+  </ol>
+  <p class="fine">L'anteprima iniziale è un concept gratuito e senza impegno. Il lavoro vero e proprio parte solo dopo il tuo ok.</p>
 </div></section>
 
-<section id="domande"><div class="wrap faq">
-  <span class="eyebrow">Domande</span><h2>Domande <em>frequenti</em></h2><p class="sub"></p>
-  <details><summary>Il cliente deve installare qualcosa?</summary><p>No. Basta avvicinare il telefono alla carta, oppure inquadrare il codice QR con la fotocamera.</p></details>
-  <details><summary>Funziona con tutti i telefoni?</summary><p>Funziona con gli iPhone recenti e con quasi tutti gli Android, se l'NFC è attivo. Per gli altri telefoni c'è il codice QR sulla carta.</p></details>
-  <details><summary>La carta porta più recensioni da 5 stelle?</summary><p>No, e nessuno può prometterlo. La carta rende più facile lasciare una recensione sincera. La valutazione dipende dall'esperienza dei tuoi clienti.</p></details>
-  <details><summary>Posso fare uno sconto a chi lascia una recensione?</summary><p>No. Le regole di Google non lo permettono. Ti consiglio di offrire la carta a tutti i clienti allo stesso modo, senza scegliere solo quelli più soddisfatti.</p></details>
-  <details><summary>Come funziona il servizio fotografico gratuito?</summary><p>Fino al 31 dicembre 2026 i nuovi clienti ricevono il servizio senza pagare: una visita concordata con te, fino a 15 foto ritoccate, consegnate entro 48 ore dallo scatto. Altre sedi, sedute aggiuntive o modifiche extra si concordano a parte.</p></details>
+<section id="chi" aria-labelledby="h-chi"><div class="wrap two">
+  <div><span class="eyebrow">Chi siamo</span><h2 id="h-chi">Un progetto indipendente, <em>nato a Roma.</em></h2></div>
+  <p style="font-size:18px;color:var(--mut)">Tocca Roma nasce con un'idea semplice: aiutare le attività locali a presentarsi meglio e a usare strumenti digitali pratici, senza complicazioni inutili. Dietro c'è una sola persona: mi occupo personalmente di foto, carte e siti, e passo di persona a consegnare il lavoro.</p>
+</div></section>
+
+<section class="band" id="domande" aria-labelledby="h-faq"><div class="wrap faq">
+  <span class="eyebrow">Domande</span><h2 id="h-faq">Domande <em>frequenti</em></h2><p class="sub"></p>
+  <details><summary>A quali attività ti rivolgi?</summary><p>Ristoranti, trattorie e caffè, bar, barbieri e parrucchieri, centri estetici, negozi indipendenti e piccoli professionisti di Roma.</p></details>
+  <details><summary>Dove lavori?</summary><p>A Roma. Passo di persona per le foto e per la consegna. Se sei fuori città, scrivici e valutiamo.</p></details>
   <details><summary>Cosa include il sito da 199 euro?</summary><p>Una pagina in italiano, adatta al telefono, con orari, menu o servizi, mappa, contatti e collegamenti ai tuoi profili, pubblicata online. Non include: dominio personalizzato, pagine aggiuntive, testi molto lunghi, manutenzione e modifiche successive. Se ti servono, ti preparo un preventivo a parte.</p></details>
-  <details><summary>Il dominio del sito è incluso?</summary><p>Il sito è pubblicato per te. Un dominio personalizzato (per esempio nomedellocale.it) costa circa 10–12 euro l'anno e lo pago al costo, senza ricarichi.</p></details>
+  <details><summary>Il dominio è incluso? E l'hosting?</summary><p>Il dominio personalizzato (per esempio nomedellocale.it) non è incluso: costa circa 10–12 euro l'anno e lo pago al costo, senza ricarichi. La pubblicazione online è inclusa; i dettagli su hosting e dominio li concordiamo prima di iniziare.</p></details>
+  <details><summary>Quanto tempo richiede un sito?</summary><p>Dipende da quanto materiale hai già (testi, foto, logo). Prima di iniziare ti do una stima chiara.</p></details>
+  <details><summary>Come funziona la carta NFC?</summary><p>La carta contiene un piccolo chip, senza batteria. Il cliente avvicina il telefono e si apre la pagina configurata; se l'NFC è spento, può inquadrare il codice QR sul retro. Nessuna app da installare. Funziona con gli iPhone recenti e con quasi tutti gli Android.</p></details>
+  <details><summary>La carta può aprire altro oltre alla pagina delle recensioni?</summary><p>Tecnicamente sì: può aprire anche il tuo sito, il menu o una pagina di contatti. La carta standard apre la pagina per lasciare una recensione su Google; per un altro collegamento scrivici e lo concordiamo.</p></details>
+  <details><summary>La carta porta più recensioni da 5 stelle?</summary><p>No, e nessuno può prometterlo. La carta rende più facile lasciare una recensione sincera a chi vuole farlo. La valutazione dipende dall'esperienza dei tuoi clienti.</p></details>
+  <details><summary>Posso fare uno sconto a chi lascia una recensione?</summary><p>No. Le regole di Google non lo permettono. Ti consiglio di offrire la carta a tutti i clienti allo stesso modo, senza scegliere solo quelli più soddisfatti.</p></details>
+  <details><summary>Cosa include l'offerta fotografica gratuita?</summary><p>Fino al 31 dicembre 2026 i nuovi clienti ricevono, senza pagare, una visita concordata con te, fino a 15 foto ritoccate, consegnate entro 48 ore dallo scatto. Non serve acquistare altri servizi. Altre sedi, sedute aggiuntive o foto in più si concordano a parte.</p></details>
+  <details><summary>Ci sono costi aggiuntivi?</summary><p>Solo quelli che concordiamo prima: dominio personalizzato, pagine aggiuntive, testi molto lunghi, manutenzione, modifiche successive al sito, altre sedute fotografiche. Nessun costo viene aggiunto senza che tu lo sappia.</p></details>
+  <details><summary>Come chiedo un preventivo?</summary><p>Scrivici su Instagram o via email, raccontando che attività hai e cosa ti serve: ti rispondiamo con una proposta chiara.</p></details>
   <details><summary>Dove vanno i miei dati?</summary><p>Questo sito non usa cookie né strumenti di tracciamento. Se mi scrivi, uso il tuo messaggio solo per risponderti.</p></details>
 </div></section>
 
-<section id="chi"><div class="wrap">
-  <span class="eyebrow">Chi siamo</span><h2>Un progetto indipendente, <em>nato a Roma</em></h2>
-  <p class="sub" style="margin-bottom:0">Dietro Tocca Roma c'è una sola persona. Mi occupo personalmente di foto, carte e siti, e passo di persona a consegnare il lavoro. Se qualcosa non ti è chiaro, scrivimi: rispondo io.</p>
-</div></section>
-
-<section class="contact" id="contatti"><div class="wrap">
-  <h2>Vuoi vedere <em style="color:var(--ochre)">un'anteprima?</em></h2>
-  <p>Scrivici: ti prepariamo senza impegno un esempio con il nome della tua attività.</p>
-  <a class="btn" href="https://ig.me/m/toccaroma" target="_blank" rel="noopener">Scrivici su Instagram</a>
-  <a class="btn o" href="mailto:toccaroma@gmail.com?subject=Anteprima%20gratuita">Scrivici via email</a>
+<section class="contact" id="contatti" aria-labelledby="h-contatti"><div class="wrap">
+  <h2 id="h-contatti">Parliamo della <em style="color:var(--ochre)">tua attività.</em></h2>
+  <p>Raccontaci di cosa hai bisogno. Ti aiutiamo a capire da dove iniziare.</p>
+  <a class="btn" href="https://ig.me/m/toccaroma" target="_blank" rel="noopener">Scrivici su Instagram<span style="position:absolute;left:-999px"> (si apre in una nuova scheda)</span></a>
+  <a class="btn o" href="mailto:toccaroma@gmail.com?subject=Parliamo%20della%20mia%20attivit%C3%A0">Scrivici via email</a>
   <p style="margin-top:22px;font-weight:700">@toccaroma · toccaroma@gmail.com</p>
 </div></section>
+</main>
 
-<footer><div class="wrap"><span>Tocca Roma · Roma</span><span>Le immagini del sito sono illustrative (Pexels). Le carte non sono prodotte né approvate da Google; Google e il logo "G" sono marchi di Google LLC.</span></div></footer>
+<footer><div class="wrap"><span>Tocca Roma · Studio digitale e creativo · Roma</span><span>Le immagini sono illustrative (Pexels). Le carte non sono prodotte né approvate da Google; Google e il logo "G" sono marchi di Google LLC.</span></div></footer>
 
 <script>
 (function(){
