@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Milad Archivio · Recensioni Google, foto e siti per attività di Roma</title>
+<title>Tocca Roma · Recensioni Google, foto e siti per attività di Roma</title>
 <meta name="description" content="Carte NFC per le recensioni Google, servizio fotografico e sito web per caffè, ristoranti e negozi di Roma. Servizio fotografico gratuito fino al 31 dicembre 2026 per i nuovi clienti.">
 <meta name="theme-color" content="#10213f">
 <style>
 :root{--navy:#10213f;--navy2:#0b1730;--coral:#ff6b57;--coral-d:#e5523e;--bg:#f6f8fb;--bg2:#e8edf5;--ink:#10213f;--mut:#566480;--line:#d9e0ec;--card:#fff;
 --font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
@@ -66,8 +67,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </style>
 </head>
 <body>
-<header><div class="wrap"><div class="logo">Milad <span>Archivio</span></div>
-<nav><a href="#servizi">Servizi</a><a href="#pacchetto">Pacchetto</a><a href="#come">Come funziona</a><a href="#stili">Stili</a><a href="#domande">Domande</a><a class="btn" href="https://ig.me/m/milad.archivio" target="_blank" rel="noopener">Scrivimi</a></nav></div></header>
+<header><div class="wrap"><div class="logo">Tocca <span>Roma</span></div>
+<nav><a href="#servizi">Servizi</a><a href="#pacchetto">Pacchetto</a><a href="#come">Come funziona</a><a href="#stili">Stili</a><a href="#domande">Domande</a><a class="btn js-contact" href="#contatti" hidden>Scrivimi</a></nav></div></header>
 
 <div class="hero"><div class="wrap">
   <div>
@@ -75,7 +76,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <h1>Più recensioni su Google. <em>Foto e sito che fanno entrare.</em></h1>
     <p class="lead">Una carta NFC per le recensioni, foto curate per Google Maps e Instagram e un sito semplice per la Sua attività. Prezzi chiari, tutto a Roma.</p>
     <div class="promo onpromo">Servizio fotografico gratuito fino al 31 dicembre 2026 per i nuovi clienti</div>
-    <div class="cta"><a class="btn" href="https://ig.me/m/milad.archivio" target="_blank" rel="noopener">Richieda un'anteprima gratuita</a><a class="btn o" href="#servizi">Vedi i prezzi</a></div>
+    <div class="cta"><a class="btn js-contact" href="#contatti">Richieda un'anteprima gratuita</a><a class="btn o" href="#servizi">Vedi i prezzi</a></div>
   </div>
   <div class="himg" role="img" aria-label="Interno di un locale con tavolini e piante (immagine illustrativa)"><i><b>15 foto in 48 ore</b>per Google Maps e Instagram</i></div>
 </div></div>
@@ -140,18 +141,29 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <section class="contact" id="contatti"><div class="wrap">
   <h2>Vuole vedere un'anteprima?</h2>
-  <p>Mi scriva su Instagram: Le preparo senza impegno un esempio con il nome della Sua attività.</p>
-  <a class="btn" href="https://ig.me/m/milad.archivio" target="_blank" rel="noopener">Scrivimi su Instagram</a>
-  &nbsp; <a class="btn o" href="https://www.instagram.com/milad.archivio/" target="_blank" rel="noopener">@milad.archivio</a>
+  <p>Mi scriva: Le preparo senza impegno un esempio con il nome della Sua attività.</p>
+  <a class="btn js-contact" id="c-ig" href="#" hidden>Scrivici su Instagram</a>
+  <a class="btn o js-contact" id="c-mail" href="#" hidden>Scrivici via email</a>
+  <p id="c-soon" style="margin-top:18px">I contatti saranno disponibili a breve.</p>
 </div></section>
 
-<footer><div class="wrap"><span>Milad Archivio · Roma</span><span>Le immagini del sito sono illustrative (Pexels). Le carte non sono prodotte né approvate da Google; Google e il logo "G" sono marchi di Google LLC.</span></div></footer>
+<footer><div class="wrap"><span>Tocca Roma · Roma</span><span>Le immagini del sito sono illustrative (Pexels). Le carte non sono prodotte né approvate da Google; Google e il logo "G" sono marchi di Google LLC.</span></div></footer>
 
 <script>
 (function(){
   // Dopo il 31 dicembre 2026 il servizio fotografico torna a prezzo pieno.
   var end = new Date('2027-01-01T00:00:00+01:00');
   if (Date.now() >= end) document.body.classList.add('promo-off');
+
+  // CONTATTI: compila questi due campi quando l'account Instagram e l'email sono pronti.
+  var INSTAGRAM = "";   // es. "toccaroma" (senza @)
+  var EMAIL = "";       // es. "ciao@esempio.it"
+
+  var ig = document.getElementById('c-ig'), ml = document.getElementById('c-mail'), soon = document.getElementById('c-soon'), top = document.querySelector('nav .js-contact');
+  var any = false;
+  if (INSTAGRAM) { ig.href = 'https://ig.me/m/' + INSTAGRAM; ig.target = '_blank'; ig.rel = 'noopener'; ig.hidden = false; any = true; }
+  if (EMAIL) { ml.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Anteprima gratuita'); ml.hidden = false; any = true; }
+  if (any) { soon.hidden = true; top.hidden = false; }
 })();
 </script>
 </body>
