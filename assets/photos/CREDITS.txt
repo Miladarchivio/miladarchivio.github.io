@@ -5,3 +5,11 @@ caffe-luce.jpg      Pexels photo ID 18623402
 cappuccino.jpg      Pexels photo ID 7859827
 piatti-italiani.jpg Pexels photo ID 6223229
 Re-check the Pexels License page before relying on this: https://www.pexels.com/license/
+barbiere-sedie.jpg  Pexels photo ID 37764947
+salone-interno.jpg  Pexels photo ID 9146943
+barbiere-marrone.jpg Pexels photo ID 13058812
+bar-italiano.jpg    Pexels photo ID 39297883
+bar-rustico.jpg     Pexels photo ID 15471839
+pizzeria-moderna.jpg Pexels photo ID 17800068
+macchina-caffe.jpg  Pexels photo ID 32159170
+pizza-tavolo.jpg    Pexels photo ID 8471702
