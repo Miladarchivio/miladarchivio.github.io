@@ -3,340 +3,155 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Milad Archivio · Recensioni Google e foto per attività locali a Roma</title>
-<meta name="description" content="Carte NFC per ottenere più recensioni su Google e servizio fotografico per Google Maps e Instagram. Per caffè, ristoranti e negozi di Roma.">
-<meta name="theme-color" content="#0b0b0d">
+<title>Milad Archivio · Recensioni Google, foto e siti per attività di Roma</title>
+<meta name="description" content="Carte NFC per le recensioni Google, servizio fotografico e sito web per caffè, ristoranti e negozi di Roma. Servizio fotografico gratuito fino al 31 dicembre 2026 per i nuovi clienti.">
+<meta name="theme-color" content="#10213f">
 <style>
-:root{
-  --bg:#0b0b0d; --bg2:#121216; --line:rgba(255,255,255,.09); --fg:#f4f1ea; --mute:#a9a69d;
-  --gold:#d4af37; --gold2:#f0d58a;
-  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
-  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-}
+:root{--navy:#10213f;--navy2:#0b1730;--coral:#ff6b57;--coral-d:#e5523e;--bg:#f6f8fb;--bg2:#e8edf5;--ink:#10213f;--mut:#566480;--line:#d9e0ec;--card:#fff;
+--font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
 .wrap{width:min(1120px,92vw);margin:0 auto}
-section{padding:110px 0;position:relative}
-.eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
-h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1;letter-spacing:-.01em}
-h1{font-size:clamp(38px,5.2vw,66px)}
-h2{font-size:clamp(30px,4.2vw,50px);margin-bottom:16px}
-h3{font-size:26px;margin-bottom:10px}
-.lead{color:var(--mute);font-size:clamp(17px,1.6vw,20px);max-width:640px}
-.gold{background:linear-gradient(100deg,var(--gold2),var(--gold) 55%,#b8892b);-webkit-background-clip:text;background-clip:text;color:transparent}
-
-/* nav */
-nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
-nav.solid{background:rgba(11,11,13,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
-.navin{display:flex;align-items:center;justify-content:space-between;height:68px}
-.brand{font-family:var(--serif);font-size:21px;letter-spacing:.01em}
-.brand b{color:var(--gold);font-weight:400}
-.links{display:flex;gap:28px;align-items:center;font-size:15px;color:var(--mute)}
-.links a:hover{color:var(--fg)}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:15px;border:1px solid var(--gold);transition:transform .2s,background .2s,color .2s;cursor:pointer;font-family:var(--sans)}
-.btn.primary{background:var(--gold);color:#17130a}
-.btn.primary:hover{background:var(--gold2);transform:translateY(-2px)}
-.btn.ghost{color:var(--fg);border-color:var(--line)}
-.btn.ghost:hover{border-color:var(--gold);color:var(--gold2)}
-.nav-cta{padding:10px 20px;font-size:14px}
-@media(max-width:820px){.links a:not(.nav-cta){display:none}}
-
-/* hero */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
-.hero::before{content:"";position:absolute;width:900px;height:900px;right:-260px;top:-180px;background:radial-gradient(circle,rgba(212,175,55,.20),transparent 62%);pointer-events:none}
-.hero::after{content:"";position:absolute;width:700px;height:700px;left:-300px;bottom:-320px;background:radial-gradient(circle,rgba(212,175,55,.09),transparent 65%);pointer-events:none}
-.herogrid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;position:relative;z-index:1}
-.hero p.lead{margin:26px 0 38px}
-.cta-row{display:flex;gap:14px;flex-wrap:wrap}
-.proof{display:flex;gap:26px;flex-wrap:wrap;margin-top:44px;color:var(--mute);font-size:14px}
-.proof span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);margin-right:10px;vertical-align:middle}
-.herocard{perspective:1200px;display:flex;justify-content:center}
-.float{animation:float 6s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
-@media(max-width:900px){.herogrid{grid-template-columns:1fr}.herocard{order:-1}.hero{padding-top:100px}}
-
-/* card (3d) */
-.card3d{width:240px;aspect-ratio:54/85.6;position:relative;transform-style:preserve-3d;transition:transform .12s ease-out;cursor:pointer}
-.card3d .face{position:absolute;inset:0;border-radius:14px;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.07)}
-.card3d .face img{width:100%;height:100%}
-.card3d .back{transform:rotateY(180deg)}
-.card3d.flipped .inner{transform:rotateY(180deg)}
-.inner{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
-.ripple{position:absolute;left:50%;top:80%;width:30px;height:30px;margin:-15px;border-radius:50%;border:1px solid var(--gold);opacity:0;animation:rip 3.2s infinite;pointer-events:none}
-.ripple:nth-child(2){animation-delay:1.1s}
-@keyframes rip{0%{transform:scale(.4);opacity:.7}100%{transform:scale(6);opacity:0}}
-
-/* strip */
-.strip{border-block:1px solid var(--line);padding:26px 0;background:var(--bg2)}
-.stripin{display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px;color:var(--mute);font-size:15px;font-family:var(--serif);font-style:italic}
-
-/* services */
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:56px}
-.tile{background:linear-gradient(160deg,#16161b,#0f0f13);border:1px solid var(--line);border-radius:22px;padding:42px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
-.tile:hover{border-color:rgba(212,175,55,.45);transform:translateY(-4px)}
-.tile .num{font-family:var(--serif);font-size:15px;color:var(--gold);letter-spacing:.14em;margin-bottom:22px}
-.tile p{color:var(--mute);margin-bottom:22px}
-.tile ul{list-style:none;display:grid;gap:11px;font-size:15.5px}
-.tile li{padding-left:26px;position:relative}
-.tile li::before{content:"";position:absolute;left:0;top:.62em;width:12px;height:1px;background:var(--gold)}
-.price{display:inline-block;margin-top:26px;padding:8px 16px;border:1px solid rgba(212,175,55,.5);border-radius:999px;color:var(--gold2);font-size:14px}
-.bundle{margin-top:26px;border:1px solid rgba(212,175,55,.35);border-radius:22px;padding:34px 42px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;background:radial-gradient(circle at 0% 0%,rgba(212,175,55,.10),transparent 60%)}
-.bundle h3{font-size:28px;margin:0 0 6px}
-.bundle p{color:var(--mute)}
-@media(max-width:860px){.grid2{grid-template-columns:1fr}.tile{padding:30px}}
-
-/* demo */
-.demo{background:var(--bg2);border-block:1px solid var(--line)}
-.demogrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
-.stage{display:flex;justify-content:center;perspective:1200px;padding:40px 0}
-.stage .card3d{width:270px}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin:30px 0 22px}
-.chip{padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--mute);font-size:14.5px;cursor:pointer;font-family:var(--sans);transition:all .2s}
-.chip:hover{color:var(--fg);border-color:var(--mute)}
-.chip.on{background:var(--gold);color:#17130a;border-color:var(--gold);font-weight:600}
-.hint{font-size:14px;color:var(--mute)}
-@media(max-width:900px){.demogrid{grid-template-columns:1fr;gap:20px}}
-
-/* steps */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:56px}
-.step{padding:34px 4px 0;border-top:1px solid var(--line);position:relative}
-.step::before{content:"";position:absolute;left:0;top:-1px;width:56px;height:1px;background:var(--gold)}
-.step .n{font-family:var(--serif);font-size:44px;color:var(--gold);line-height:1;margin-bottom:16px}
-.step p{color:var(--mute)}
-@media(max-width:860px){.steps{grid-template-columns:1fr}}
-
-/* portfolio */
-.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:50px}
-.gal img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
-.igcta{margin-top:50px;border:1px dashed rgba(212,175,55,.5);border-radius:22px;padding:56px 30px;text-align:center;background:radial-gradient(circle at 50% 0%,rgba(212,175,55,.10),transparent 65%)}
-.igcta h3{margin-bottom:12px}
-.igcta p{color:var(--mute);margin:0 auto 26px;max-width:520px}
-
-/* faq */
-.faq{max-width:820px;margin-top:46px}
-details{border-top:1px solid var(--line);padding:22px 0}
-details:last-child{border-bottom:1px solid var(--line)}
-summary{cursor:pointer;list-style:none;font-family:var(--serif);font-size:21px;display:flex;justify-content:space-between;gap:20px}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--gold);font-size:26px;line-height:1;transition:transform .25s}
-details[open] summary::after{transform:rotate(45deg)}
-details p{color:var(--mute);margin-top:14px;max-width:700px}
-
-/* contact */
-.contact{text-align:center;background:radial-gradient(ellipse at 50% 100%,rgba(212,175,55,.16),transparent 62%)}
-.contact .lead{margin:0 auto 38px}
-.contact .cta-row{justify-content:center}
-footer{border-top:1px solid var(--line);padding:34px 0;color:var(--mute);font-size:14px}
-.footin{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
-
-/* reveal */
-.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
-.rv.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.float,.ripple{animation:none}html{scroll-behavior:auto}}
+h1,h2,h3{font-weight:800;letter-spacing:-.02em;line-height:1.1}
+h1{font-size:clamp(34px,5vw,58px)}h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:10px}h3{font-size:21px;margin-bottom:6px}
+.eyebrow{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--coral);font-weight:700}
+.btn{display:inline-block;background:var(--coral);color:#fff;padding:14px 26px;border-radius:999px;font-weight:700;font-size:16px;border:2px solid var(--coral);transition:.15s}
+.btn:hover{background:var(--coral-d);border-color:var(--coral-d)}
+.btn.o{background:transparent;color:inherit;border-color:currentColor}.btn.o:hover{background:rgba(255,255,255,.12)}
+header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:10}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.logo{font-weight:800;font-size:20px}.logo span{color:var(--coral)}
+nav{display:flex;gap:26px;align-items:center;font-size:14.5px}nav a{opacity:.88}nav a:hover{opacity:1}
+nav .btn{padding:9px 20px;font-size:14px;opacity:1}
+.hero{background:var(--navy);color:#fff;padding:40px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{margin:14px 0 18px}.hero h1 em{font-style:normal;color:var(--coral)}
+.hero .lead{font-size:18px;opacity:.85;max-width:520px;margin-bottom:24px}
+.promo{display:inline-block;background:var(--coral);color:#fff;border-radius:10px;padding:10px 16px;font-weight:700;font-size:15px;margin-bottom:26px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.himg{height:470px;border-radius:26px;background:url(assets/photos/bar-piante.jpg) center 55%/cover;position:relative;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.himg i{position:absolute;left:-24px;bottom:30px;background:#fff;color:var(--ink);border-radius:10px;padding:12px 18px;font-style:normal;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.himg i b{display:block;color:var(--coral);font-size:15px}
+section{padding:80px 0}
+.sub{color:var(--mut);max-width:620px;margin-bottom:34px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.card .ph{height:160px;background-size:cover;background-position:center}
+.card .in{padding:22px;display:flex;flex-direction:column;flex:1}
+.card p{color:var(--mut);margin-bottom:12px;font-size:15px}
+.card ul{margin:0 0 16px;padding-left:18px;font-size:14.5px}
+.price{margin-top:auto;font-size:14px;color:var(--mut)}
+.price b{font-size:30px;color:var(--ink);font-weight:800}
+.price s{margin-left:6px}
+.tag{display:inline-block;background:var(--coral);color:#fff;border-radius:6px;padding:2px 8px;font-weight:700;font-size:12px;margin-left:6px;vertical-align:middle}
+.price .row{display:block;margin-bottom:2px}
+.offpromo{display:none}.promo-off .onpromo{display:none}.promo-off .offpromo{display:inline}
+.bundle{background:var(--bg2)}
+.bun{background:var(--card);border:2px solid var(--coral);border-radius:10px;padding:30px;display:grid;grid-template-columns:1.4fr .6fr;gap:24px;align-items:center}
+.bun p{color:var(--mut)}.bun .price{text-align:right}.bun .price b{font-size:44px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.step{border-top:3px solid var(--coral);padding-top:14px}.step b{display:block;font-size:18px;margin-bottom:4px}.step span{color:var(--mut);font-size:15px}
+.styles{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
+.styles figure{text-align:center;font-size:12.5px;color:var(--mut)}
+.styles img{border-radius:8px;box-shadow:0 6px 16px rgba(16,33,63,.2);margin-bottom:8px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin-bottom:10px}
+.faq summary{cursor:pointer;font-weight:700}.faq p{color:var(--mut);margin-top:8px;font-size:15px}
+.contact{background:var(--navy);color:#fff;text-align:center}
+.contact p{opacity:.85;max-width:560px;margin:10px auto 26px}
+footer{background:var(--navy2);color:#c8d1e4;font-size:13px;padding:22px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:860px){nav a:not(.btn){display:none}.hero .wrap,.grid3,.steps,.bun{grid-template-columns:1fr}.himg{height:320px}.himg i{left:12px}.styles{grid-template-columns:repeat(4,1fr)}.bun .price{text-align:left}}
 </style>
 </head>
 <body>
+<header><div class="wrap"><div class="logo">Milad <span>Archivio</span></div>
+<nav><a href="#servizi">Servizi</a><a href="#pacchetto">Pacchetto</a><a href="#come">Come funziona</a><a href="#stili">Stili</a><a href="#domande">Domande</a><a class="btn" href="https://ig.me/m/milad.archivio" target="_blank" rel="noopener">Scrivimi</a></nav></div></header>
 
-<nav id="nav"><div class="wrap navin">
-  <a href="#top" class="brand">Milad <b>Archivio</b></a>
-  <div class="links">
-    <a href="#servizi">Servizi</a>
-    <a href="#carte">Le carte</a>
-    <a href="#come">Come funziona</a>
-    <a href="#foto">Foto</a>
-    <a href="#faq">Domande</a>
-    <a href="#contatti" class="btn primary nav-cta">Scrivimi</a>
+<div class="hero"><div class="wrap">
+  <div>
+    <div class="eyebrow">Per attività locali a Roma</div>
+    <h1>Più recensioni su Google. <em>Foto e sito che fanno entrare.</em></h1>
+    <p class="lead">Una carta NFC per le recensioni, foto curate per Google Maps e Instagram e un sito semplice per la Sua attività. Prezzi chiari, tutto a Roma.</p>
+    <div class="promo onpromo">Servizio fotografico gratuito fino al 31 dicembre 2026 per i nuovi clienti</div>
+    <div class="cta"><a class="btn" href="https://ig.me/m/milad.archivio" target="_blank" rel="noopener">Richieda un'anteprima gratuita</a><a class="btn o" href="#servizi">Vedi i prezzi</a></div>
   </div>
-</div></nav>
-
-<header class="hero" id="top">
-  <div class="wrap herogrid">
-    <div>
-      <div class="eyebrow">Per caffè, ristoranti e negozi di Roma</div>
-      <h1>Più recensioni su Google.<br><span class="gold">Foto che fanno entrare.</span></h1>
-      <p class="lead">Una carta NFC: il cliente avvicina il telefono e si apre la pagina per scrivere una recensione sulla tua attività. Più un servizio fotografico per Google Maps e Instagram.</p>
-      <div class="cta-row">
-        <a href="#contatti" class="btn primary">Richiedi un'anteprima gratuita</a>
-        <a href="#servizi" class="btn ghost">Scopri i servizi</a>
-      </div>
-      <div class="proof">
-        <span>Nessuna app per il cliente</span>
-        <span>Italiano e inglese</span>
-        <span>Nessun cookie su questo sito</span>
-      </div>
-    </div>
-    <div class="herocard">
-      <div class="float">
-        <div class="card3d tilt" data-flip>
-          <div class="inner">
-            <div class="face"><img src="assets/cards/noir_front.svg" alt="Carta recensioni Google, lato italiano" width="240" height="380"></div>
-            <div class="face back"><img src="assets/cards/noir_back.svg" alt="Carta recensioni Google, lato inglese con codice QR" width="240" height="380"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<div class="strip"><div class="wrap stripin">
-  <span>Un tocco, una recensione.</span>
-  <span>Funziona con iPhone e Android.</span>
-  <span>Pensata anche per i turisti.</span>
+  <div class="himg" role="img" aria-label="Interno di un locale con tavolini e piante (immagine illustrativa)"><i><b>15 foto in 48 ore</b>per Google Maps e Instagram</i></div>
 </div></div>
 
-<section id="servizi">
-  <div class="wrap">
-    <div class="eyebrow rv">Servizi</div>
-    <h2 class="rv">Due cose semplici,<br>fatte bene.</h2>
-    <p class="lead rv">Chi cerca un posto su Google guarda due cose: le foto e le recensioni. Io mi occupo di tutte e due.</p>
-
-    <div class="grid2">
-      <article class="tile rv">
-        <div class="num">01</div>
-        <h3>Carte NFC per le recensioni</h3>
-        <p>La carta sta sul bancone o accanto alla cassa. Il cliente avvicina il telefono e arriva direttamente alla pagina per scrivere una recensione. Se il telefono non ha l'NFC, basta inquadrare il codice QR sulla stessa carta.</p>
-        <ul>
-          <li>Grafica con il nome della tua attività</li>
-          <li>Italiano su un lato, inglese sull'altro</li>
-          <li>Funziona con iPhone e Android</li>
-          <li>Nessun abbonamento e nessuna app</li>
-        </ul>
-      </article>
-      <article class="tile rv">
-        <div class="num">02</div>
-        <h3>Servizio fotografico</h3>
-        <p>15 foto della tua attività, pensate per Google Maps e Instagram. Le ricevi entro 48 ore, pronte da pubblicare.</p>
-        <ul>
-          <li>15 foto selezionate e rifinite</li>
-          <li>Consegna in 48 ore</li>
-          <li>Ambiente, prodotti e dettagli del tuo locale</li>
-        </ul>
-        <span class="price">Prezzo di lancio: €90</span>
-      </article>
-    </div>
-
-    <div class="bundle rv">
-      <div>
-        <h3>Pacchetto vetrina: foto + carte</h3>
-        <p>Le due cose insieme, a condizioni dedicate. Scrivimi e ti preparo una proposta.</p>
-      </div>
-      <a href="#contatti" class="btn ghost">Chiedi la proposta</a>
-    </div>
+<section id="servizi"><div class="wrap">
+  <div class="eyebrow">Servizi</div><h2>Tre servizi, prezzi semplici</h2>
+  <p class="sub">Può scegliere un solo servizio o combinarli. L'anteprima e il preventivo sono senza impegno.</p>
+  <div class="grid3">
+    <div class="card"><div class="ph" style="background-image:url(assets/photos/caffe-luce.jpg)"></div><div class="in">
+      <h3>Carta NFC per le recensioni</h3><p>Il cliente avvicina il telefono e si apre la pagina per scrivere una recensione su Google.</p>
+      <ul><li>Nome del Suo locale sulla carta</li><li>Codice QR sul retro</li><li>iPhone e Android, nessuna app</li></ul>
+      <div class="price"><span class="row"><b>€15</b> 1 carta</span><span class="row"><b>€20</b> 2 carte</span></div></div></div>
+    <div class="card"><div class="ph" style="background-image:url(assets/photos/piatti-italiani.jpg)"></div><div class="in">
+      <h3>Servizio fotografico</h3><p>15 foto della Sua attività, pronte per Google Maps e Instagram.</p>
+      <ul><li>Consegna entro 48 ore</li><li>Sopralluogo concordato con Lei</li><li>Formati pronti da pubblicare</li></ul>
+      <div class="price"><span class="onpromo"><b>€0</b> <s>€79</s><span class="tag">fino al 31/12/2026, nuovi clienti</span></span><span class="offpromo"><b>€79</b></span></div></div></div>
+    <div class="card"><div class="ph" style="background-image:url(assets/photos/cappuccino.jpg)"></div><div class="in">
+      <h3>Sito web per la Sua attività</h3><p>Una pagina chiara con orari, menu, mappa e contatti.</p>
+      <ul><li>Adatto al telefono</li><li>Testi in italiano</li><li>Pubblicazione inclusa</li></ul>
+      <div class="price"><b>€199</b> una tantum<br><span style="font-size:12.5px">Il dominio (circa €10–12 l'anno) è a parte, al costo.</span></div></div></div>
   </div>
-</section>
+</div></section>
 
-<section id="carte" class="demo">
-  <div class="wrap demogrid">
-    <div>
-      <div class="eyebrow rv">Le carte</div>
-      <h2 class="rv">Scegli lo stile<br>che sta bene al tuo locale.</h2>
-      <p class="lead rv">Sette grafiche, tutte in due lingue. Tocca la carta per girarla e passa il mouse per vederla muoversi.</p>
-      <div class="chips rv" id="chips"></div>
-      <p class="hint rv">Sulla carta vera c'è il nome della tua attività. Se vuoi un'altra grafica, dimmelo e la preparo.</p>
-    </div>
-    <div class="stage rv">
-      <div class="card3d tilt" id="demo" data-flip style="position:relative">
-        <div class="inner">
-          <div class="face"><img id="demoF" src="assets/cards/classico_front.svg" alt="Anteprima della carta, lato italiano" width="270" height="428"></div>
-          <div class="face back"><img id="demoB" src="assets/cards/classico_back.svg" alt="Anteprima della carta, lato inglese" width="270" height="428"></div>
-        </div>
-        <span class="ripple"></span><span class="ripple"></span>
-      </div>
-    </div>
+<section class="bundle" id="pacchetto"><div class="wrap">
+  <div class="eyebrow">Pacchetto</div><h2>Tutto insieme costa meno</h2><p class="sub">Un'unica soluzione per presentarsi bene online e raccogliere recensioni.</p>
+  <div class="bun"><div><h3>Pacchetto Completo</h3><p>2 carte NFC + servizio fotografico (15 foto) + sito web one-page.</p></div>
+  <div class="price"><b>€229</b><br><s>€298 se presi separatamente</s></div></div>
+</div></section>
+
+<section id="come"><div class="wrap">
+  <div class="eyebrow">Come funziona</div><h2>Tre passi, nessuna complicazione</h2><p class="sub">Si parte sempre da un'anteprima gratuita.</p>
+  <div class="steps">
+    <div class="step"><b>1. Mi scrive</b><span>Mi dice che tipo di attività ha. Le mostro un'anteprima con il nome del Suo locale, senza impegno.</span></div>
+    <div class="step"><b>2. Prepariamo tutto</b><span>Dopo il Suo ok preparo carte, foto o sito. Provo ogni carta con il telefono prima di consegnarla.</span></div>
+    <div class="step"><b>3. Consegna a mano</b><span>Passo di persona a Roma. Le carte vanno sul bancone o alla cassa e il lavoro è pronto.</span></div>
   </div>
-</section>
+</div></section>
 
-<section id="come">
-  <div class="wrap">
-    <div class="eyebrow rv">Come funziona</div>
-    <h2 class="rv">Tre passi. Nessun impegno<br>fino all'ultimo.</h2>
-    <div class="steps">
-      <div class="step rv"><div class="n">1</div><h3>Una carta di esempio</h3><p>Passo da te e ti lascio una carta di esempio. Poi ti scrivo i dettagli, solo se ti va.</p></div>
-      <div class="step rv"><div class="n">2</div><h3>La tua anteprima</h3><p>Ti mando via email la carta con il nome della tua attività e il tuo codice QR. È gratis e senza impegno.</p></div>
-      <div class="step rv"><div class="n">3</div><h3>Consegna di persona</h3><p>Se ti piace, preparo le carte e te le porto. Ti spiego in due minuti come usarle con i clienti.</p></div>
-    </div>
+<section class="bundle" id="stili"><div class="wrap">
+  <div class="eyebrow">Stili della carta</div><h2>Scelga lo stile del Suo locale</h2><p class="sub">Sette stili, tutti con il nome della Sua attività e il codice QR sul retro.</p>
+  <div class="styles">
+    <figure><img src="assets/cards/classico_front.svg" alt="Classico">Classico</figure>
+    <figure><img src="assets/cards/elegante_front.svg" alt="Elegante">Elegante</figure>
+    <figure><img src="assets/cards/noir_front.svg" alt="Noir">Noir</figure>
+    <figure><img src="assets/cards/royal_front.svg" alt="Royal">Royal</figure>
+    <figure><img src="assets/cards/smeraldo_front.svg" alt="Smeraldo">Smeraldo</figure>
+    <figure><img src="assets/cards/bordeaux_front.svg" alt="Bordeaux">Bordeaux</figure>
+    <figure><img src="assets/cards/sabbia_front.svg" alt="Sabbia">Sabbia</figure>
   </div>
-</section>
+</div></section>
 
-<section id="foto" class="demo">
-  <div class="wrap">
-    <div class="eyebrow rv">Foto</div>
-    <h2 class="rv">Il tuo locale,<br>come vuoi che lo vedano.</h2>
-    <p class="lead rv">Le prime foto su Google Maps sono quelle che decidono se qualcuno entra o passa oltre.</p>
-    <div class="gal" id="gal"></div>
-    <div class="igcta rv" id="igcta">
-      <h3>Il portfolio è su Instagram</h3>
-      <p>Qui trovi i lavori più recenti. Scrivimi se vuoi vedere esempi vicini al tuo tipo di attività.</p>
-      <a class="btn primary" href="https://www.instagram.com/milad.archivio/" target="_blank" rel="noopener">Vai a @milad.archivio</a>
-    </div>
-  </div>
-</section>
+<section id="domande"><div class="wrap faq">
+  <div class="eyebrow">Domande</div><h2>Domande frequenti</h2><p class="sub"></p>
+  <details><summary>Il cliente deve installare qualcosa?</summary><p>No. Basta avvicinare il telefono alla carta, oppure inquadrare il codice QR con la fotocamera.</p></details>
+  <details><summary>Funziona con tutti i telefoni?</summary><p>Funziona con gli iPhone recenti e con quasi tutti gli Android, se l'NFC è attivo. Per gli altri telefoni c'è il codice QR sulla carta.</p></details>
+  <details><summary>La carta porta più recensioni da 5 stelle?</summary><p>No, e nessuno può promettervelo. La carta rende più facile lasciare una recensione sincera. La valutazione dipende dall'esperienza dei Suoi clienti.</p></details>
+  <details><summary>Posso fare uno sconto a chi lascia una recensione?</summary><p>No. Le regole di Google non lo permettono. Le consiglio di offrire la carta a tutti i clienti allo stesso modo, senza scegliere solo quelli più soddisfatti.</p></details>
+  <details><summary>Come funziona il servizio fotografico gratuito?</summary><p>Fino al 31 dicembre 2026 i nuovi clienti ricevono 15 foto della loro attività senza pagare. Ci mettiamo d'accordo su giorno e orario, e le foto arrivano entro 48 ore. Le chiedo solo il permesso di mostrare alcune foto nel mio portfolio.</p></details>
+  <details><summary>Il dominio del sito è incluso?</summary><p>Il sito è pubblicato per Lei. Un dominio personalizzato (per esempio nomedellocale.it) costa circa 10–12 euro l'anno e lo pago al costo, senza ricarichi.</p></details>
+  <details><summary>Dove vanno i miei dati?</summary><p>Questo sito non usa cookie né strumenti di tracciamento. Se mi scrive, uso il Suo messaggio solo per risponderLe.</p></details>
+</div></section>
 
-<section id="faq">
-  <div class="wrap">
-    <div class="eyebrow rv">Domande</div>
-    <h2 class="rv">Le risposte che<br>ti servono.</h2>
-    <div class="faq rv">
-      <details><summary>Il cliente deve installare qualcosa?</summary><p>No. Basta avvicinare il telefono alla carta, oppure inquadrare il codice QR con la fotocamera.</p></details>
-      <details><summary>Funziona con tutti i telefoni?</summary><p>Funziona con gli iPhone recenti e con quasi tutti gli Android, se l'NFC è attivo. Per gli altri telefoni c'è il codice QR sulla carta.</p></details>
-      <details><summary>La carta porta più recensioni da 5 stelle?</summary><p>No, e nessuno può promettertelo. La carta rende più facile lasciare una recensione sincera. La valutazione dipende dall'esperienza dei tuoi clienti.</p></details>
-      <details><summary>Posso fare uno sconto a chi lascia una recensione?</summary><p>No. Le regole di Google non lo permettono. Ti consiglio di offrire la carta a tutti i clienti allo stesso modo, senza scegliere solo quelli più soddisfatti.</p></details>
-      <details><summary>Quanto costa?</summary><p>Il servizio fotografico costa €90 al prezzo di lancio. Per le carte il prezzo dipende dalla quantità: scrivimi e ti preparo un'offerta chiara.</p></details>
-      <details><summary>Dove vanno i miei dati?</summary><p>Questo sito non usa cookie né strumenti di tracciamento. Se mi scrivi, uso il tuo messaggio solo per risponderti.</p></details>
-    </div>
-  </div>
-</section>
+<section class="contact" id="contatti"><div class="wrap">
+  <h2>Vuole vedere un'anteprima?</h2>
+  <p>Mi scriva su Instagram: Le preparo senza impegno un esempio con il nome della Sua attività.</p>
+  <a class="btn" href="https://ig.me/m/milad.archivio" target="_blank" rel="noopener">Scrivimi su Instagram</a>
+  &nbsp; <a class="btn o" href="https://www.instagram.com/milad.archivio/" target="_blank" rel="noopener">@milad.archivio</a>
+</div></section>
 
-<section id="contatti" class="contact">
-  <div class="wrap">
-    <div class="eyebrow rv">Contatti</div>
-    <h2 class="rv">Vuoi vedere la tua carta<br><span class="gold">prima di decidere?</span></h2>
-    <p class="lead rv">Scrivimi il nome della tua attività. Ti preparo un'anteprima gratuita, senza impegno.</p>
-    <div class="cta-row rv">
-      <a class="btn primary" href="https://ig.me/m/milad.archivio" target="_blank" rel="noopener">Scrivimi su Instagram</a>
-      <a class="btn ghost" id="mail" href="#" style="display:none">Scrivimi una email</a>
-    </div>
-  </div>
-</section>
-
-<footer><div class="wrap footin">
-  <span>© 2026 Milad Archivio · Roma</span>
-  <span>Questo sito non usa cookie.</span>
-</div></footer>
+<footer><div class="wrap"><span>Milad Archivio · Roma</span><span>Le immagini del sito sono illustrative (Pexels). Le carte non sono prodotte né approvate da Google; Google e il logo "G" sono marchi di Google LLC.</span></div></footer>
 
 <script>
-/* ---- impostazioni modificabili ---- */
-var CONTACT_EMAIL = "";          // es. "nome@esempio.it": se compilato, appare il pulsante email
-var GALLERY = [];                // es. ["foto/01.jpg","foto/02.jpg"]: se compilato, sostituisce il pulsante Instagram
-var DESIGNS = [["classico","Classico"],["elegante","Elegante"],["noir","Noir"],["royal","Royal"],["smeraldo","Smeraldo"],["bordeaux","Bordeaux"],["sabbia","Sabbia"]];
-/* ----------------------------------- */
 (function(){
-  var nav=document.getElementById('nav');
-  function s(){nav.classList.toggle('solid',window.scrollY>30)} s(); addEventListener('scroll',s,{passive:true});
-
-  if(CONTACT_EMAIL){var m=document.getElementById('mail');m.href='mailto:'+CONTACT_EMAIL+'?subject='+encodeURIComponent('Anteprima carta recensioni');m.style.display='inline-flex'}
-
-  var g=document.getElementById('gal');
-  if(GALLERY.length){GALLERY.forEach(function(p){var i=new Image();i.src=p;i.alt='Foto di un locale';i.loading='lazy';g.appendChild(i)});document.getElementById('igcta').style.marginTop='30px'}
-
-  var chips=document.getElementById('chips'),F=document.getElementById('demoF'),B=document.getElementById('demoB');
-  DESIGNS.forEach(function(d,i){var b=document.createElement('button');b.className='chip'+(i?'':' on');b.textContent=d[1];b.type='button';
-    b.onclick=function(){[].forEach.call(chips.children,function(c){c.classList.remove('on')});b.classList.add('on');F.src='assets/cards/'+d[0]+'_front.svg';B.src='assets/cards/'+d[0]+'_back.svg'};chips.appendChild(b)});
-
-  [].forEach.call(document.querySelectorAll('.tilt'),function(c){
-    var rot=0;
-    c.addEventListener('click',function(){c.classList.toggle('flipped')});
-    c.parentNode.addEventListener('mousemove',function(e){
-      var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
-      c.style.transform='rotateY('+(x*18)+'deg) rotateX('+(-y*14)+'deg)'});
-    c.parentNode.addEventListener('mouseleave',function(){c.style.transform=''});
-  });
-
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
-  [].forEach.call(document.querySelectorAll('.rv'),function(el){io.observe(el)});
+  // Dopo il 31 dicembre 2026 il servizio fotografico torna a prezzo pieno.
+  var end = new Date('2027-01-01T00:00:00+01:00');
+  if (Date.now() >= end) document.body.classList.add('promo-off');
 })();
 </script>
 </body>
